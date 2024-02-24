@@ -13,7 +13,7 @@ const Navbar = () => {
                     </div>
                     <div className='Link flex gap-10'>
                         {["Services", "Our Work", "About us", "Insights", "Contact Us"].map((items, index) => (
-                            <a key={index} className={`text-md font-light capitalize ${index == 4 && "ml-32"}`}>{items}</a>
+                            <a key={index} className={`text-lg font-light capitalize ${index == 4 && "ml-32"}`}>{items}</a>
                         ))}
                     </div>
                 </div>
