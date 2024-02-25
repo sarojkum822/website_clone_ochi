@@ -5,12 +5,21 @@ import { GoArrowUpRight } from "react-icons/go";
 const LandingPage = () => {
     return (
         <>
-            <div className='w-full h-screen bg-zinc-800 pt-2 border-t-2'>
+            <div className='w-full h-screen bg-zinc-900 pt-2 border-t-2'>
                 <div className='textstructure mt-40 px-10'>
                     {["WE CREATE", "EYE-OPENING", "PRESENTATION"].map((items, index) => {
-                        return <h1 key={index} className={`uppercase text-8xl m-4 leading-[4vw] font-medium font-["Founders_Grostesk,Roboto, sans-serif"] ${index == 1 && "border-l-8"}`}>{items}</h1>
+                        return (
+                            <div className="masker">
+                                <div className='w-fit justify-center flex'>
+                                    {index === 1 && (<div className='w-[9vw] h-[6vw] m-3 bg-green-700 rounded-sm'></div>)}
+                                    <h1 key={index} className={`uppercase text-8xl m-4 leading-[4vw] font-medium font-["Founders_Grostesk,Roboto, sans-serif"]`}>{items}</h1>
+
+                                </div>
+                            </div>
+                        )
                     })}
                 </div>
+
                 <div className='border-t-2 mt-40 bg-zinc-900 flex px-10 py-5 justify-between'>
 
                     {["For public and private companies", "From the first pitch to IPO"].map((items, index) => (
@@ -22,6 +31,8 @@ const LandingPage = () => {
                     </div>
 
                 </div>
+
+                
 
             </div>
         </>
